@@ -14,3 +14,8 @@ RUN sage -pip install git+https://github.com/nthiery/sage-semigroups/
 # Ensure this COPY goes *after* installation of prerequisites; otherwise the
 # build cache will be invalidated any time we change a file in this repository.
 COPY --chown=sage:sage . ${HOME}
+
+# The default entrypoint used in the sagemath-dev images does not instantiate a
+# sage shell, so commands like jupyter don't work; this should be fixed.
+# upstream to make the sagemath-dev images easier to use with binder
+ENTRYPOINT [ "/home/sage/sage/docker/entrypoint.sh" ]
