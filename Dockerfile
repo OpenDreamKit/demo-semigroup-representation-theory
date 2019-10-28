@@ -15,6 +15,10 @@ RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-semigro
 # build cache will be invalidated any time we change a file in this repository.
 COPY --chown=sage:sage . ${HOME}
 
+# The sagemath-dev images start in SAGE_ROOT by default so set the user's pwd
+# back to HOME
+WORKDIR ${HOME}
+
 # The default entrypoint used in the sagemath-dev images does not instantiate a
 # sage shell, so commands like jupyter don't work; this should be fixed.
 # upstream to make the sagemath-dev images easier to use with binder
