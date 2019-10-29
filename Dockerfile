@@ -14,6 +14,7 @@ RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-gap-sem
 RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-semigroups/
 RUN sage -pip install --no-cache-dir git+https://github.com/zerline/francy-widget/
 RUN sage -pip install --no-cache-dir git+https://github.com/sagemath/sage-combinat-widgets/@develop
+#RUN sage -pip install --no-cache-dir git+https://github.com/sagemath/sage-combinat-widgets/@master
 RUN sage -pip install --no-cache-dir git+https://github.com/sagemath/sage-explorer/@develop
 
 # Ensure this COPY goes *after* installation of prerequisites; otherwise the
