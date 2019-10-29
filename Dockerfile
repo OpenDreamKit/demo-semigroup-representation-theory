@@ -6,9 +6,9 @@ RUN sage -i gap_packages && rm -rf /home/sage/sage/upstream
 RUN sage -pip install --no-cache-dir RISE
 RUN sage -pip install --no-cache-dir nbdime
 RUN sage -pip install --no-cache-dir dot2tex
-RUN sage -pip install --no-cache-dir sage_combinat_widgets
-RUN sage -pip install --no-cache-dir sage-explorer
-RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-gap-semantic-interface
+RUN sage -pip install --no-cache-dir git+https://github.com/sagemath/sage-combinat-widgets/@develop
+RUN sage -pip install --no-cache-dir git+https://github.com/sagemath/sage-explorer/@develop
+RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-gap-semantic-interface/
 RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-semigroups/
 
 # Ensure this COPY goes *after* installation of prerequisites; otherwise the
