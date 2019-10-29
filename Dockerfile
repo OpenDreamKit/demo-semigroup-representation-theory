@@ -9,6 +9,7 @@ RUN sage -pip install RISE
 RUN sage -pip install dot2tex
 RUN sage -pip install sage_combinat_widgets
 RUN sage -pip install sage-explorer
+RUN sage -pip install nbdime
 RUN sage -pip install git+https://github.com/nthiery/sage-gap-semantic-interface
 RUN sage -pip install git+https://github.com/nthiery/sage-gap-semantic-interface
 RUN sage -pip install git+https://github.com/nthiery/sage-semigroups/
