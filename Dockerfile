@@ -10,7 +10,7 @@ RUN sage -pip install --no-cache-dir --upgrade ipywidgets
 RUN sage -pip install --no-cache-dir dot2tex
 RUN sage -pip install --no-cache-dir RISE
 RUN sage -pip install --no-cache-dir nbdime
-RUN sage -pip install --no-cache-dir cppyy
+#RUN sage -pip install --no-cache-dir cppyy
 RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-gap-semantic-interface/
 RUN sage -pip install --no-cache-dir git+https://github.com/nthiery/sage-semigroups/
 RUN sage -pip install --no-cache-dir git+https://github.com/zerline/francy-widget/
