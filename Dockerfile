@@ -1,7 +1,7 @@
 # Dockerfile for binder
 FROM registry.gitlab.com/sagemath/sage/sagemath-dev:9.0-py3
 
-RUN sudo apt-get update && sudo apt-get -qy install graphviz build-essential git && sudo apt-get clean
+RUN sudo apt-get update && sudo apt-get -qy install graphviz build-essential git g++ && sudo apt-get clean
 RUN sage -i gap_packages && rm -rf /home/sage/sage/upstream
 RUN sudo apt-get update && sudo apt-get -qq install -y curl \
     &&  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - \
